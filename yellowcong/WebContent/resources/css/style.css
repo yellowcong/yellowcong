@@ -1,0 +1,523 @@
+/*yellowcong网站的样式
+  时间 ：2015-12-29
+  地点 ：黄下
+*/
+	html * {
+    outline: 0 !important;
+}
+/*设定所有的背景色为 灰色*/
+body {
+    background: none repeat scroll 0 0 #ecedf0;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+}
+p {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+    color: #777777;
+    letter-spacing: 0.30px;
+    float: left;
+    width: 100%;
+    line-height: 24px;
+}
+a:hover {
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+}
+
+/*设定登录样式*/
+.login {
+    left: 50%;
+    margin-left: -215px;
+    position: absolute;
+    top: 120px;
+    width: 430px;
+    z-index: 0;
+}
+
+/*登录框的样式*/
+.login-form {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.16);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 13px 48px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 0 13px 48px rgba(0, 0, 0, 0.43);
+    -ms-box-shadow: 0 13px 48px rgba(0, 0, 0, 0.43);
+    -o-box-shadow: 0 13px 48px rgba(0, 0, 0, 0.43);
+    box-shadow: 0 13px 48px rgba(0, 0, 0, 0.43);
+    float: left;
+    padding: 30px;
+    width: 100%;
+}
+.login-form > span img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    /*设定圆角*/
+    border-radius: 40px 40px 40px 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    /*盒子阴影效果*/
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.22);
+	/*设定变化时间，旋转后反悔*/
+	transition: all 1s ease-in-out 0s;
+						
+}
+/*设定头像旋转效果*/
+.login-form > span img:HOVER{
+	-webkit-transform: rotateZ(360deg);
+	-moz-transform: rotateZ(360deg);
+	-o-transform: rotateZ(360deg);
+	-ms-transform: rotateZ(360deg);
+	transform: rotateZ(360deg);
+}
+.login-form > span {
+    display: table;
+    float: none;
+    margin: 0 auto;
+}
+.login-form > h5 {
+    color: #fff;
+    float: left;
+    font-family: Lato;
+    font-size: 21px;
+    font-weight: 100;
+    line-height: 16px;
+    margin: 35px 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+.login-form > h5 > strong {
+	color:#eee;
+    font-weight: bold;
+}
+.login-form > form {
+    float: left;
+    width: 100%;
+}
+.login-form > form > fieldset {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.16);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    float: left;
+    height: 50px;
+    margin-bottom: 15px;
+    padding: 0 22px;
+    position: relative;
+    width: 100%;
+}
+.login-form > form > fieldset > i {
+    color: #fff;
+    font-size: 18px;
+    margin-top: -10px;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    
+}
+/*登录矿的数据*/
+.login-form > form > fieldset > input {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color: #fff;
+    float: left;
+    font-family: Roboto;
+    font-size: 15px;
+    height: 44px;
+    letter-spacing: 0.3px;
+    padding: 0 15px 0 0;
+    width: 100%;
+}
+
+.login-form > form > label {
+    color: #dfdfdf;
+    float: left;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.3px;
+    margin: 12px 0 0;
+}
+/*输入框距离*/
+.login-form > form > label input {
+    border: medium none;
+    float: left;
+    margin-right: 10px;
+    
+}
+
+
+/*登录按钮*/
+.login-form > form button {
+    border: medium none;
+    float: right;
+    font-family: Roboto;
+    font-size: 14px;
+    padding: 10px 26px;
+}
+/*hover的时间*/
+.login-form > form button:HOVER{
+	background: #5A9EFA;
+	color:#fff;
+}
+.login-form > a {
+    color: #fff;
+    float: left;
+    font-family: Roboto;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    margin-top: 30px;
+    text-align: center;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    width: 100%;
+}
+.login-form > a:hover {
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+}
+.login > span {
+    color: #cecece;
+    float: left;
+    font-family: Lato;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+/*左边的多数据登录*/
+.reg-social-btns {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: -50px;
+    top: 102px;
+    width: 50px;
+    z-index: -1;
+}
+.reg-social-btns > li {
+    float: left;
+    margin-bottom: 10px;
+}
+.reg-social-btns > li > a {
+    float: left;
+}
+.reg-social-btns > li > a > i {
+    color: #fff;
+    font-size: 21px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    width: 50px;
+}
+.reg-social-btns > li > a > i:hover {
+    padding-left: 52px;
+    padding-right: 18px;
+    width: 80px;
+}
+.reg-social-btns > li > a > i.fa-facebook {
+    background: #3f70b2;
+}
+.reg-social-btns > li > a > i.fa-twitter {
+    background: #5a9efa;
+}
+.reg-social-btns > li > a > i.fa-github {
+    background: #82807d;
+}
+.reg-social-btns > li > a > i.fa-google-plus {
+    background: #ff5c5c;
+}
+/*登录表单样式结束 login.jsp*/
+
+/*home.jsp  begin*/
+
+	/*消息提醒样式  begin*/
+ 	.news_ticker{
+ 		position: relative;
+		width: 100%;
+		padding-top:5px;
+		padding-bottom:0px;
+		text-align: center;
+ 	}
+ 	.bg_orange{
+ 	background-color: #E9662C;
+ 	}
+ 	
+ 	/*设定标签字体颜色  白色*/
+ 	.news_ticker  ul  li  a{
+ 		color:#fff;
+ 		font-size: 13px;
+ 	}
+ 	/*设定叉叉的布局
+ 	  在我们的原始的框框中的布局是绝对
+ 	*/
+ 	#news-ticker-close{
+ 		position: absolute;
+		top: 5px;
+		right: 20px;
+		color: rgba(255, 255, 255, 0.4);
+ 	}
+ 	
+ 	#news-ticker-close:HOVER{
+ 		color: #fff;
+ 	}
+	/*消息提示样式 end*/
+
+	/*导航栏 begin*/
+		/*设定导航栏颜色*/
+	.head_navbar{
+		background: #2A3B4C none repeat scroll 0% 0%;
+		width: 100%;
+		height: 50px;
+	}
+	/*设定logo*/
+	.navbar_logo{
+		float:left;
+		width: 250px;
+		height: 100%;
+		background: #2F4355 none repeat scroll 0% 0%;
+		text-align: center;
+	}
+	
+	.navbar_logo a{
+		font-size: 20px;
+		line-height: 20px;
+		color: #FFF;
+		height: 100%;
+		width: 100%;
+	}
+	/*设定按钮的字体样好似*/
+	 .navbar_logo a span{
+	 	font-size: 30px;
+	 	display: block;
+	 	font-family: "Oswald",sans-serif;
+	 	padding-top: 10px;
+	 }
+	
+	
+	/*.navbar_main begin*/
+	/*设定搜索和小化*/
+	.navbar_main{
+		float: left;
+		background: #2A3B4C none repeat scroll 0% 0%;
+		
+	}
+	
+	.navbar_main a,.head_nav_right a{
+		font-size: 18px;
+		color:#fff;
+	}
+	.head_navbar_menu{
+		float: left;
+		padding: 15px 20px;
+		background-color: transparent;
+		transition: all 0.3s ease 0s;
+		height: 50px;
+		border-radius: 0px;
+		color: #FFF;
+	}
+	
+	
+	.navbar_main a:HOVER,.head_nav_right a:HOVER {
+		color: #E9662C;
+		background: #777;
+	}
+	
+	/*右边列表*/
+	.head_navbar_right{
+		float:right !important; 
+		display:inline;
+		list-style:outside none none ;
+		margin-left: 0px;
+	}
+	
+	.head_navbar_right li{
+		margin-top: 0px;
+		float: left;
+	}
+	
+	.head_nav_right{
+		float: right;
+	}
+	
+	/*配置relative 和 absolute 相对*/
+	.head_nav_right ul li a{
+	   display: block;
+	   position: relative;
+	}
+	
+		.head_nav_right .count{
+		background: #E74C3C none repeat scroll 0px 0px padding-box;
+		border-radius: 50%;
+		color: #FFF;
+		display: block;
+		font-size: 9px;
+		height: 16px;
+		width: 16px;
+		line-height: 14px;
+		position: absolute;
+		right: 10px;
+		text-align: center;
+		top: 11px;
+	}
+	
+	/*设定头像*/
+	.head_nav_right img{
+	margin-top:-5px;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		vertical-align: middle;
+	}
+	
+	/*导航栏 end*/
+
+	/*左边工具栏目 begin*/
+	.content_nav_left_content{
+		position: absolute;
+	}
+	.content_nav_left{
+		position:relative;
+		float:left;
+		width: 250px;
+		height:100%; 
+		background: #33485C;
+	}
+	
+	/*定义用户的模块*/
+	.nav_left_user{
+		position: relative;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #374D63;
+	}
+	.nav_left_user img{
+		height:80px;
+		width:80px;
+		display:block;
+		border-radius: 50%;
+		margin-left: 30px;
+		
+	}
+	
+	.nav_left_user .nav_left_user_statu{
+		margin-top:-70px;
+		margin-left:130px;
+		float: left;
+		color: #FFF;
+	}
+	
+	.nav_left_user .nav_left_user_statu span{
+		font-size: 18px;
+	}
+	.nav_left_user .nav_left_user_statu .statu_icon{
+		font-size: 12px;
+		color: #2ECC71;
+	}	
+	.nav_left_user .nav_left_user_statu .statu_info{
+		font-size: 12px;
+		padding-left: 10px;
+	}
+	
+	/*滑动栏目*/
+	.nano-pane {
+    background: rgba(0, 0, 0, 0.1) none repeat scroll 0% 0%;
+    position: absolute;
+    width: 7px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    opacity: 0.01;
+    transition: all 0.2s ease 0s;
+    border-radius: 7px;
+	}
+	
+	.nano-slider {
+    background: #eee none repeat scroll 0% 0%;
+    position: relative;
+    margin: 0px 1px;
+    border-radius: 7px;
+	}
+	/*左边工具栏  end*/
+	
+	/*右边  顶部导航栏 begin*/
+	.content_nav{
+		float:left;
+		height:50px;
+		color:#777;
+		width:100%;
+		margin-top:-10px;
+		line-height:50px;
+		background-color: #fff;
+		box-shadow:0px 2px 2px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(0, 0, 0, 0.05);
+	}
+	.content_nav .content_navs_list{
+		list-style: outside none none;
+		display: inline;
+		float: right;
+		margin-right: 20px;
+	}
+	
+	.content_nav .content_navs_list li{
+		display: block;
+		float: left;
+	}
+	.content_nav .content_navs_list li a{
+		color: #777;
+		transition: all 0.2s ease-in-out 0s;
+	}
+	.content_nav .content_navs_list li a:HOVER{
+		color:#E74C3C;
+	}
+	.content_nav span{
+	margin-left: 270px;
+	font-size: 25px;
+	}
+	/*右边顶部导航栏 end*/
+	
+	/*顶部导航的一点点 begin*/
+	body{
+	overflow-y: hidden;
+}
+.content_bodys {
+	margin-left: 250px;
+	padding-left:20px;
+	padding-top:20px;
+	padding-right:20px;
+	float: left;
+}
+
+.content_bodys .iframe_conent {
+	frameborder: 0px;
+	height: 100%;
+	width: 100%;
+	/*去掉border*/
+	border: medium none;
+}
+	/*顶部导航  end*/
+/*---------------------------------------------------home.jsp end*/
+
+/*
+	
+*/

@@ -1,0 +1,949 @@
+/*
+黄聪
+2016年开始
+
+定义的扩展的yellowcong.easyui.js 中所需要的css样式文件
+*/
+.date_content{
+	background: #fff;
+	margin:20px 20px 50px; 
+}
+
+/*boostrap 的表格样式 开始*/
+.bootstrap_style_table{
+	color:#777;
+	/*border: 1px solid #DDD;*/
+	backgroud:transparent;
+	border-spacing: 0px;
+	border-top: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	
+	line-height: 18px;
+}
+
+.bootstrap_style_table td,.bootstrap_style_table th{
+	border-left:  1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	/*对于表格，不需要明确设定高度和宽度*/
+	padding:10px;
+	/*设定字体居中显示*/
+	text-align: center;
+}
+
+.bootstrap_style_table thead{
+	background: #EFEFEF;
+}
+
+/*小号的按钮*/
+.btn-small {
+    display: inline-block;
+    padding: 3px 6px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-search {
+    padding: 3px 10px;
+}
+.search_content{
+}
+
+/*表内容数据样式*/
+.table_content{
+	padding-top: 60px;
+}
+.table_search_menu{
+	float: left;
+}
+/*设定dropmenu的高度和宽度*/
+.dropdown-menu{
+	margin-top: -1px;
+}
+.dropdown-menu li{
+	height: 25px;
+	line-height:25px;
+	font-size: 12px;
+	color:#777;
+	padding-left:10px;
+}
+
+.dropdown-menu li i{
+	padding-right: 20px;
+}
+.dropdown-menu li:hover{
+	background: #EEE;
+	color:#000;
+	cursor: pointer;
+}
+
+.table_info{
+}
+
+.input_small{
+	display:inline-block;
+	width: 120px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+/*表格的 分页 当前页*/
+.input_small_pager{
+	width: 40px;
+	display: inline-block;
+}
+/*表格分页的显示*/
+.input_small_pagers{
+	width: 70px;
+	display: inline-block;
+}
+.table_pager_info a{
+	text-decoration: none;
+}
+
+
+.table_pager{
+	margin-top: 20px;
+	color:#777;
+}
+.table_pager_info{
+	float: left;
+}
+/*分页样式*/
+.table_pagination{
+float: left;
+margin-top: -20px;
+}
+
+/*
+选中我们的分页符的效果
+*/
+.table_pagination_focus {
+    color: #2A6496;
+    background-color: yellow;
+    border-color: #DDD;
+}
+/*
+	我们边框错误的显示样式，做得颜色有点不对劲
+*/
+.table_pagination_input_err{
+box-shadow:inset 0 1px 1px #C9302C, 0 0 8px #C9302C;
+border:1px solid #C93020;
+}
+/*
+设定显示样式的结果
+*/
+.prettyprint ol{
+	margin-left:-9px;
+}
+/*表格样式结束*/
+
+/*
+--------------------------------------------------------------
+nav 菜单栏目的实现
+*/
+	
+/*定义栏目 的现实了*/
+
+.nav_left_list{
+	background: #33485C;
+}
+
+/*
+	对于ul中的标签，需要设定为block
+*/
+.nav_left_list a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 13px;
+	display: block;
+}
+
+/*通过加入 padding-left去掉 ul标签的 */
+.nav_left_list .nav_list_navs{
+	margin-top:0px;
+	padding-left:0px;
+	list-style: outside none none;
+}
+
+.nav_left_list .nav_list_navs li{
+	margin-left: 0px;
+	display: block;
+	border-bottom: 1px solid #374D63;		
+	line-height: 40px;
+}
+
+.nav_left_list .nav_list_navs li .nav_icon{
+	padding-left:16px;
+	padding-right:16px;
+	font-size: 16px;
+	min-width: 20px;
+	text-align: center;
+}
+
+.nav_left_list .nav_list_navs li span{
+	padding-left: 13px;
+	
+}
+
+
+.nav_left_list .nav_list_navs li .drop-icon{
+	line-height:40px;
+	float: right;
+	padding-right: 20px;
+}
+.nav_left_list .nav_list_navs a{
+	
+}
+/*点击后的背景色*/
+.nav_left_list .nav_list_navs a :HOVER{
+	/* background: #E74C3C none repeat scroll 0% 0%;
+	transition:all 0.2s ease-in-out 0s;
+	outline: medium none;  */
+}
+
+/**
+navbar 选中后的颜色，
+*/
+.navs_select{
+background: #E74C3C none repeat scroll 0% 0%;
+	transition:all 0.2s ease-in-out 0s;
+	outline: medium none; 
+}
+/*
+复写这些方法的时候注意要修改 这下面的4个样式的颜色
+.navs_sub_select
+.navs_sub_select_active
+.navs_select
+.navs_select_active
+然后设定字体的颜色，然后就没有然后了，就搞定了，需要结合bootstrap
+子菜单选中的效果的颜色
+*/
+.navs_sub_select{
+	color: #E74C3C;
+}
+/*
+子菜单选中的效果的颜色
+*/
+.navs_sub_select_active{
+	color: #E74C3C;
+}
+/*
+菜单选中激活的效果的颜色
+*/
+.navs_select_active{
+	background: #E74C3C none repeat scroll 0% 0%;
+	transition:all 0.2s ease-in-out 0s;
+	outline: medium none; 
+}
+
+
+/*设定点击后的样式*/
+.nav_left_list .nav_list_navs li .nav_show{
+	transform:rotate(90deg);
+	padding-left: 20px;
+}
+
+.nav_show_select{
+	transform:rotate(90deg);
+	padding-left: 20px;
+}
+
+
+/**/
+.sub_navs{
+	display: block;
+	padding-left: 0px;
+}
+
+.sub_navs li a{
+	padding-left: 32px;
+}
+/*-------------------------------------------------导航栏样式结束*/
+	
+/*----------------------------------------
+-------技能drawSkillsArc 的样式   
+这个代码是根据前辈给的，然后封装成了js的方法
+2016-1-27
+黄聪
+黄下
+*/
+.skill {
+    height:600px;
+    padding-bottom: 50px;
+}
+
+.skill .inner {
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+/* End layout styles */
+
+.clearfix, .inner {
+    *zoom: 1;
+}
+.inner:before,
+.inner:after {
+    display: table;
+    content: "";
+}
+
+.inner:after,
+.clearfix:after {
+    clear: both;
+}
+
+
+.skill .legend {
+    float:left;
+    width:150px;
+    margin-top:140px;
+}
+
+.skill .legend h3 {
+    text-align: right;
+}
+
+.skill .skillsList {
+    padding:0;
+    list-style:none;
+}
+
+.skill .skillsList li {
+    display:block;
+    float:right;
+    clear:both;
+    padding:0 15px;
+    height:35px;
+    line-height:35px;
+    color:#fff;
+    margin-bottom:1px;
+    font-size:18px;
+    cursor: pointer;
+    opacity: 0;
+}
+.skill #skillsArc {
+    float:left;
+    width:830px;
+    height:500px;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+@-moz-keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-2000px);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+@-o-keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        -o-transform: translateX(-2000px);
+    }
+
+    100% {
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+}
+@keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+    -moz-animation-name: fadeInLeftBig;
+    -o-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig;
+}
+
+/*----------------------------------------
+-------技能drawSkillsArc 的样式结束*/
+
+
+/*设定样式为圆形的边框
+联系的时候的边框效果
+--------------------------------------------------------
+*/
+.social-connect-element {
+    width: 40px;
+    height: 40px;
+    background-color: #008A75;
+    transition: all 0.5s ease 0s;
+    display: inline-block;
+    margin-right: 2px;
+    border-bottom: medium none;
+    border-radius: 20px;
+    transition: all 0.5s ease 0s;
+	text-align: center;	    
+}
+.social-connect-element  i{
+	margin-top:10px;
+	font-size: 20px;
+	color: #fff;
+}
+/*方形*/
+.social-connect-element:hover {
+    border-radius: 5px;
+    transition: all 0.5s ease 0s;
+    
+}
+/*
+---------------------------------------------------------------------
+边框样式结束
+*/
+
+
+
+
+/*
+我们的导航栏目的js-----------------------------------------------------------------------
+*/
+/*导航栏的css*/
+/*
+* @date 2012-05-04
+*/
+/*导航栏的css*/
+.clearfix:after{content:" "; display:block; height:0; clear:both; visibility:hidden;}
+.clearfix{zoom:1;}
+.fl { float:left;}
+.fr { float:right;}
+
+/*包含的类*/
+.head_content .content {margin:0 auto; width:980px;} 
+.head_content{height: 64px;font:12px/1.5 "微软雅黑","tahoma", Verdana, Geneva, sans-serif; color:#666; position:relative;} 
+.nav-box  a { text-decoration:none; color:#999; outline:none; }
+.head_content a:hover { text-decoration:underline; }
+.head_content img{ vertical-align: middle; border:0; }
+.head_content{ background:#fbfbfb url('../img/navBg.gif') repeat-x 0 bottom;}
+.nav-box ul  { list-style:none; }
+/*首页头*/
+.head-warp{padding-top: 17px;}
+.head-warp .head { width:980px; margin:0 auto; background-image:none;}
+.head { height:49px;  background:url() no-repeat 50% bottom; padding:14px 0 1px;}
+.head h1 a { display:block; width:100%; height:42px;}
+.nav-box { float:right; position:relative;margin-top: -17px;}
+.nav-box ul { padding-top:8px;}
+.nav-box ul li { float:left; font-family:"微软雅黑"; font-size:14px; padding:0 12px; height:41px; line-height:41px;}
+.nav-box ul li a { color:#4b4b4b;}
+.nav-box ul li a:hover { text-decoration:none;}
+.nav-box ul li.last { font-family:"微软雅黑"; font-size:12px; padding-top:1px;}
+.nav-box ul li.last a { color:#a2a2a1;}
+.nav-box .nav-line { position:absolute; left:0; bottom:0; height:2px; line-height:2px; font-size:0; width:52px; background:#35c4fd;}
+		
+/*解决logo问题*/
+/*定义首页的logo显示*/
+.logo {	margin-top: -65px;}
+.font_logo {font-family: '微软雅黑';font-size: 30px;}
+/*定义LOGO 图片 对于logo有问题的，我们可以通过img来解决*/
+.font_logo img {width:100px; height:65px;padding-right: 30px;}
+/*定义name位置*/
+.name {	margin-left: 80px;	margin-top: -65px;}
+.no_ename {	margin-left: 80px;margin-top: -55px;}
+/*定义英语名称*/
+.en_name {font-size: 8px;}
+/*
+我们的导航栏目的js-----------------------------------------------------------------------
+*/
+
+
+/*
+--------------------------------------------------------------------------------------
+左侧导航栏目,模仿极客学院
+*/
+/*左侧导航栏目*/
+	.nav_page{
+		width: 213px;
+		border-top: #35C4FD 2px solid;
+	}
+	.nav_page ul{
+		list-style: outside none none;
+		/*设定ul*/
+		padding-left:0px;
+		/* border: 1px solid #e4e4e4; */
+		
+	}	
+	
+	.nav_page ul li{
+		list-style: outside none none;
+		border-left: 1px solid #e4e4e4;
+		border-right: 1px solid #e4e4e4;
+		display: block;
+		height: 38px;
+		padding-left:20px;
+		border-bottom: 1px solid #F5F5F5;
+		/*186px center no-repeat;*/
+		background: url("../img/more-icon.png") 186px center no-repeat;
+		/*背景的大小*/
+		background-size: 6px 10px;
+		position: relative;
+	}
+	.nav_page ul li:last-child{
+		border-bottom: 1px solid #e4e4e4;
+	}
+	.nav_page ul li a{
+		text-decoration: none;
+		color: #000;
+		display: block;
+		font-family: "Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,宋体,sans-serif";
+		line-height: 37px;
+		font-size: 13px;
+		
+	}
+	
+	.nav_page ul li:hover{
+		color: #35b558;
+		border-left: #35b558 2px solid;
+		border-top: 1px solid #e4e4e4;
+		border-bottom: 1px solid #e4e4e4;
+		background: #FFF;
+		border-right: 0px solid #fff;
+	}
+	.nav_page ul li a:hover{
+		color: #35b558;
+	}
+	/*子菜单的div*/
+	.nav_page .nav_sub{
+		cursor:pointer;
+		webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+		-moz-box-shadow: 2px 2px 4px rgba(0,0,0,.1); 
+		box-shadow: 1px 2px 4px rgba(0,0,0,.1);
+		overflow: hidden;
+		width: 108px;
+		/*min-height: 373px;*/
+		background: #fff;
+		border: 1px solid #e4e4e4;
+		position:absolute;
+		left: 211px;
+		top: -1px;
+		z-index: 1001;
+		width:380px;
+		border-left:0px;
+		display: none;
+		padding-bottom: 30px;
+		color: #000;
+	}
+	/*设定我们的导航栏目头部显示*/
+	.nav_page .nav_sub .nav_sub_head{
+		display: block;
+		border-bottom: 1px solid #f5f5f5;
+		margin-right:20px;
+		height: 40px;
+		line-height: 47px;
+	}
+	.nav_page .nav_sub .nav_sub_head a{
+		text-align: left;
+	}
+	/*子菜单类容*/
+	.nav_page .nav_sub .nav_sub_content {
+	
+		margin-left: 20px;
+	}
+	.nav_page .nav_sub .nav_sub_content span a{
+	}
+	.nav_page .nav_sub .nav_sub_content a:hover{
+		color: #35b558;
+	}
+	.nav_page .nav_sub .nav_sub_content .nav_sub_body a{
+		display: inline-block;
+		padding-right: 20px;
+	}
+	.nav_page .nav_sub .nav_sub_content .nav_sub_body{
+		size: 14px;
+		margin-right: 20px;
+		list-style: none;
+		margin:0px;
+		padding-left: 0px;
+	}
+
+/*
+--------------------------------------------------------------------------------------
+左侧导航栏目 结束
+*/
+/*------------------------文章数据显示插件,开始-----------------------------------------------------*/
+/*右边的数据了*/
+	.wrap_content{
+		box-sizing: content-box;
+		height: 36px;
+		border: 1px solid #e4e4e4;
+		background: #f5f5f5;
+		color: #666;
+		line-height: 36px;
+	}
+	.wrap_info{
+		background: #FFF;
+		font-size: 12px;
+		font-weight: 400;
+		float:left;
+		cursor: default;
+		line-height: 36px;
+		padding-left:30px;
+		padding-right:30px;
+		display: inline-block;
+		/* border-right: 1px solid #e4e4e4; */
+	}
+	
+	.wrap_select_options{
+		float: left;
+		height: 36px;
+	}
+	.wrap_select_options dl{
+		list-style: none;
+		margin-top: 0px;
+		padding-left: 0px;
+		float: left;
+		position: relative;
+	}
+	
+	.wrap_select_options dl dt{
+		list-style: none;
+		margin-top: 0px;
+		padding-left: 0px;
+		line-height:36px;
+		text-align:center;
+		display:inherit;
+		padding-left:20px;
+		padding-right:20px;
+		border-right: 1px solid #f5f5f5;
+		border-left: 1px solid #f5f5f5;
+		float:left;
+		font-weight: 400;
+	}
+	.wrap_select_options .optioins_first dt{
+		border-left: 1px solid #e4e4e4;
+	}
+	.wrap_select_options dl dt:HOVER {
+		cursor: default;
+		background: #fff;
+		border-right: 1px solid #e4e4e4;
+		border-left: 1px solid #e4e4e4;
+	}
+	
+	/*子菜单*/
+	.wrap_select_options dl dd{
+		position:absolute;
+		text-align: center;
+		display: none;
+		background: #fff;
+		
+	}
+	
+	.wrap_select_options dl dd a{
+		text-decoration: none;
+		display:block;
+		color: #666;
+	}
+	
+	.wrap_select_options dl dd a:hover{
+		color: #35b558;
+	}
+	
+	.wrap_select_options_hover{
+		margin-top:36px;
+		padding-top:10px;
+		border-left:1px solid #e4e4e4;
+		border-bottom:1px solid #e4e4e4;
+		border-right:1px solid #e4e4e4;
+		z-index: 100;
+	}
+	/*左边显示效果*/
+	.wrap_select_style{
+		float: right;
+	}
+	.wrap_select_style ul{
+		list-style: none;
+		padding-left: 0px;
+	}
+	.wrap_select_style ul li{
+		list-style: none;
+		margin-top:0px;
+		padding-left: 0px;
+		font-size:16px;
+		float: left;
+		border-left: 1px solid #e4e4e4;
+		color: #999999;
+	}
+	.wrap_select_style ul li i{
+		width:36px;
+	}
+	.wrap_select_style ul li:HOVER {
+		cursor: pointer	;	
+		background: #FFF;
+	}
+	.nav_pages_listbox{
+	}
+	/*列表显示数据*/
+	.nav_pages_listbox .listbox_lager{
+	 list-style: none;
+	 margin-left: 0px;
+	 padding-left: 0px;
+	}
+	/*设定我们的nav的边框*/
+	.nav_pages_listbox .listbox_lager li{
+		 list-style: none;
+		 margin-left: 0px;
+		 padding-left: 0px;
+		 width:240px;
+		 height:220px;
+		 /*设定边框*/
+		webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+		-moz-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+		box-shadow: 1px 2px 4px rgba(0,0,0,.1);
+		border: 1px solid #e4e4e4;
+		float: left;
+		margin-right: 16px;
+		margin-top: 18px;
+		position: relative;
+	}
+	
+	/*显示我们的数据，添加点击到上面有一种缓慢变化的效果*/
+	.listbox_img{
+		position: relative;
+		z-index: 10;
+	}
+	
+	.listbox_img .listbox_see{
+		position: absolute;
+		background: #000;
+		background: rgba(0,0,0,.4);
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		transition: all 0.6s ease 0s;
+	}
+	.list_img_info{
+		width: 238px;
+		height: 129px;
+	}
+	.nav_pages_listbox .listbox_img  i{
+		width: 100%;
+		height: 100%;
+		padding-top: 45px;
+	}
+	.nav_pages_listbox .listbox_img a:hover{
+		color: #EEE;
+		/*#35b558*/
+	}
+	
+	.lesson-info-h2, .lesson-list .lesson-infor h5 {
+	    font-size: 14px;
+	    color: #333;
+	    line-height: 18px;
+	    margin-bottom: 12px;
+	    height: 36px;
+	    overflow: hidden;
+	}
+	
+	.listbox_info a{
+		color: #000;
+		text-decoration: none;
+	}
+	.listbox_info .lesson-info-h2 a:hover{
+		color:#35b558;
+	}
+	
+	.listbox_info{
+		margin-top:-10px;
+		padding-left: 5px;
+		padding-right: 5px;
+		color:gray;
+	}
+	.listbox_info .listbox_info_desc{
+		display: none;
+	}
+	
+	.listbox_info .listbox_info_desc span{
+		cursor: default;
+	}
+	
+	/*设定选中后的显示效果*/
+	.listbox_info .listbox_info_desc span::selection{
+		background:#35b558;
+			color: #FFF;
+	}
+	.listbox_info .listbox_info_desc span::-moz-selection {
+		background:#35b558;
+		color: #FFF;
+	}
+	
+	/*________________________________________________________*/
+	.nav_pages_listbox .listbox_list{
+		margin-left: -40px;
+	}
+	/*横向显示的效果*/
+	.nav_pages_listbox .listbox_list ul{
+		list-style: none;
+		margin-top: 0px;
+		padding-left: 0px;
+	}
+	.nav_pages_listbox .listbox_list li{
+		list-style: none;
+		margin-top: 0px;
+		padding-left: 0px;
+		margin-top:28px;
+	 	width: 770px;
+	 	height: 131px;
+	}
+	
+	.nav_pages_listbox .listbox_list li .listbox_list_img img{
+		width: 240px;
+		height: 130px;
+		
+	}
+	.nav_pages_listbox .listbox_list li .listbox_list_img{
+		position:relative;
+		float: left;
+	}
+	.nav_pages_listbox .listbox_list_info{
+		margin-top:-10px;
+		width:520px;
+		float: left;
+		padding-left: 10px;
+	}
+
+	/**/
+	.listbox_list{
+		display: none;
+	}
+	.nav_pages_listbox .listbox_list_info a{
+		 font-size: 14px;
+		 text-decoration:none;
+		    color: #333;
+		    line-height: 18px;
+		    margin-bottom: 12px;
+		    height: 36px;
+		    overflow: hidden;
+	}
+	
+	.nav_pages_listbox .listbox_list_info a:hover{
+		color:#35b558;
+	}
+	.nav_pages_listbox  .listbox_list_info	 p{
+		color:gray;
+	}
+	/*显示查看效果*/
+	.nav_pages_listbox  .listbox_list_see{
+		position: absolute;
+		background: #000;
+		background: rgba(0,0,0,.4);
+		text-align:center;
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		transition: all 0.6s ease 0s;
+	}
+	
+	.nav_pages_listbox  .listbox_list_see i{
+		margin-top: 45px;
+	}
+	.nav_pages_listbox  .listbox_list_see i:hover{
+		color:gray;
+	}
+	.nav_pages_listbox  .listbox_list_info	 .listbox_list_dicr{
+		height: 60px;
+	}
+/*------------------------文章数据显示插件,开始-----------------------------------------------------*/
+
+/*-----------------------------底部数据显示----------------------------------------------------------------*/
+.page_foot_beifeng{
+	 	 background: #343434;  
+		color: #9B9B9B;
+	}
+	.page_foot_border{
+		height:7px;
+		background-image: url("../img/footBg.png");
+		background-repeat: repeat-x;
+	} 
+	
+	.page_foot_beifeng dl{
+		width: 185px;
+		padding-left: 30px;
+		margin: 25px 0;
+		float: left;
+		min-height: 175px;
+	}
+	.page_foot_beifeng dl a{
+		text-decoration: none;
+		color: gray;
+		font-size:14px;
+		font-family: "Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,宋体,sans-serif"
+		font-weight: 400;
+		
+	}
+	.page_foot_beifeng dl a:hover{
+		color:#35b558;
+		transition: all 0.2s ease 0s;
+	}
+	
+	.page_foot_beifeng dl dt a{
+		font-size: 16px;
+		font-weight: 500;
+	}
+	.page_foot_beifeng dl dd{
+		font-size: 14px;
+		margin-top: 10px;
+	}
+	.page_foot_beifeng dl dd img{
+		margin-top: -20px;
+	}
+	.page_foot_daohang{
+		height: 270px;
+	}
+/*-----------------------------底部数据显示结束----------------------------------------------------------------*/
+
+
+

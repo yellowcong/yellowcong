@@ -1,0 +1,235 @@
+/*简历的css样式
+黄下
+2016-1-27 
+黄聪 ，yellowcong
+*/
+
+		body{
+			font-family:"微软雅黑", Arial, 'Lato', Calibri, sans-serif;
+		}
+		
+		.section{
+			text-align: center;
+		}
+
+		/*设定好显示的图片框的大小*/
+		.user_logo a {
+			display: inline-block;
+			padding: 1px;
+			width: 256px;
+			height: 256px;
+			border: 10px solid #AEE2D9;
+			border-radius: 50%;
+			background-color: #FFF !important;
+		}
+
+		/*
+		设定头像的大小
+		*/
+		.user_logo img {
+			width: 256px !important;
+			height: 256px !important;
+			border-radius: 256px;
+			/*盒子颜色*/
+			box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.22);
+			/*设定变化时间*/
+			transition: all 1s ease-in-out 0s;
+			opacity: 1;
+		}
+		/*
+		当我们的鼠标移动到我们的头像上的时候的小狗
+		*/
+		.user_logo img:hover {
+			-webkit-transform: rotateZ(360deg);
+			-moz-transform: rotateZ(360deg);
+			-o-transform: rotateZ(360deg);
+			-ms-transform: rotateZ(360deg);
+			transform: rotateZ(360deg);
+			/*改变鼠标的样式*/
+			cursor:pointer;
+		}
+		/*
+		section 的大标签
+		*/
+		.section h1{
+			font-size: 3.5em;
+			font-weight:bold;
+			color: #EEF3F0;
+			text-shadow: 1px 2px #22C3AA, 2px 4px #AEE2D9;
+		}
+		/*
+		section 的子正文
+		*/
+		.section .subtitle{
+			margin: 1em 0px 0.25em;
+			font-size: 1.1em;
+			color: #AEE2D9;
+		}
+		/*
+		section 的二级标题
+		*/
+		.section h2{
+			font-size: 2em;
+			color: #EEF3F0;
+		}
+		/*
+		section 的三级级标题
+		
+		*/
+		.section h3{
+			color:#EEF3F0;
+			font-weight:400px;
+			font-size: 1.25em;
+			margin: 0px 0px 0.1em;
+		}
+		
+		.section h4{
+			color:#AEE2D9;
+			font-weight:400px;
+			font-size: 1.25em;
+			margin: 0px 0px 0.1em;
+		}
+		
+		/*
+		高亮显示效果
+		*/
+		.section .highlight{
+			font-size: 1.1em;
+			color: #9F3;
+		}
+		/*去除横线*/
+		.section a{
+			text-decoration: none;
+		}
+		/*
+		连接移动上去的效果
+		*/
+		.section a:hover{
+		
+			color: #008A75;
+			text-decoration: none;
+			transition: all 0.5s ease 0s;
+		}
+		/*装标签的div*/
+		.section .tags{
+			margin: 15px auto;
+		}
+		/*标签的样式*/
+		.section .tag {
+		    background-color: #096254;
+		    color: #AEE2D9;
+		    border-radius: 3px;
+		    display: inline-block;
+		    padding: 2px 8px;
+		    margin-right: 3px;
+		    margin-bottom: 3px;
+		    opacity: 0.5;
+		}
+		/*
+		熟悉
+		*/
+		.section .familiar {
+		    opacity: 0.75;
+		}
+		/*
+		 熟练,没有透明度
+		*/
+		.section .expert {
+		    opacity: 1;
+		}
+		.section p{
+		    font-size: 1.1em;
+		    margin: 0.5em 0px;
+	        color: #AEE2D9;
+		}
+
+/*设定样式为圆形的边框
+--------------------------------------------------------
+*/
+.social-connect-element {
+    width: 40px;
+    height: 40px;
+    background-color: #008A75;
+    transition: all 0.5s ease 0s;
+    display: inline-block;
+    margin-right: 2px;
+    border-bottom: medium none;
+    border-radius: 20px;
+    transition: all 0.5s ease 0s;
+    
+}
+.social-connect-element  i{
+	margin-top:10px;
+	font-size: 20px;
+	color: #fff;
+}
+/*方形*/
+.social-connect-element:hover {
+    border-radius: 5px;
+    transition: all 0.5s ease 0s;
+    
+}
+/*
+---------------------------------------------------------------------
+边框样式结束
+*/
+#experienceTimeLine{
+	margin-top: -50px;
+}
+/*
+	设定数据格式
+-----------------------------------
+技能的css  单独拿了出来，没直接倒入index 的js	
+*/
+.skills {
+    height:600px;
+    padding-bottom: 50px;
+}
+
+.inner {
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+/* End layout styles */
+
+.clearfix, .inner {
+    *zoom: 1;
+}
+.inner:before,
+.inner:after {
+    display: table;
+    content: "";
+}
+
+.inner:after,
+.clearfix:after {
+    clear: both;
+}
+
+
+.legend {
+    float:left;
+    width:150px;
+    margin-top:140px;
+}
+
+.legend h3 {
+    text-align: right;
+}
+.skill .skillsList {
+    padding:0;
+    list-style:none;
+}
+.skillsList li {
+    display:block;
+    float:right;
+    clear:both;
+    padding:0 15px;
+    height:35px;
+    line-height:35px;
+    color:#fff;
+    margin-bottom:1px;
+    font-size:18px;
+    cursor: pointer;
+}
